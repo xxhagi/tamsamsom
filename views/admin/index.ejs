@@ -1,0 +1,27 @@
+<%- include('includes/header'); -%>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">isAdmin?</th>
+      <th scope="col">Insert Date</th>
+      <th scope="col">Update Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for(var i=0; i<users.length; i++) { %>
+    <tr>
+      <th scope="row"><%= users[i].id %></th>
+      <td><%= users[i].username %></td>
+      <td><%= users[i].email %></td>
+      <td><%= users[i].is_admin %></td>
+      <td><%= moment(users[i].inserted).format('YYYY-MM-DD h:mm:ss a') %></td>
+      <td><% if(users[i].updated) { %><%= moment(users[i].updated).format('YYYY-MM-DD h:mm:ss a') %><% } %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+<%- include('includes/footer'); -%>

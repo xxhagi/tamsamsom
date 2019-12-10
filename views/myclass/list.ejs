@@ -1,0 +1,81 @@
+<%- include('includes/header'); -%>
+<%- include('includes/nav'); -%>
+
+<div class="container">
+
+<div class="mx-auto" style="width: 50rem;">
+
+  <br>
+  
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+          <div class="card-header" id="headingOne" >
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">               
+                Week1
+              </button>
+            </h2>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <p class="font-weight-light">
+              1주차 내용
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Week2
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <p class="font-weight-light">
+                  2주차 내용
+                </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Week3
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body ">
+                <p class="font-weight-light">
+                    3주차 내용
+                  </p>
+              </div>
+            </div>
+          </div>
+
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Week4
+              </button>
+            </h2>
+          </div>          
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+            <div class="card-body">
+              <p class="font-weight-light">
+                    4주차 내용
+                  </p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<%- include('includes/footer'); -%>

@@ -1,0 +1,60 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="http://localhost:3000/">
+  <img src="static/img/logo.png" width="170" height="70" alt="">
+  </a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarNav">
+  
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/test"> 레벨테스트</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sugang">수강신청 </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/myclass">나의 강의실 </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/qna">Q&A </a>
+          </li>
+
+
+        <% if(locals.user && locals.user.isAdmin == 1) { %>
+          <li class="nav-item active">
+            <a class="nav-link" href="/admin">Admin</a>
+          </li>
+        <% } %>
+      </ul>
+
+
+      <% if(locals.user) { %>
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item">
+          <a class="nav-item nav-link mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= locals.user.email %>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-light my-2 my-sm-0" href="/account/logout">로그아웃</a>
+        </li>
+      </ul>
+      <% } else { %>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <a class="nav-link btn btn-light my-2 my-sm-0" href="/account/login">로그인</a>
+        <a class="nav-link btn btn-light my-2 my-sm-0" href="/account/signup">회원가입</a>
+      </div>
+      <% } %>
+      </div>
+      </nav>
+
+      </ul>
+    </div>
+  </nav>
