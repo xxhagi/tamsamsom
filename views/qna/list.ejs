@@ -1,0 +1,33 @@
+<%- include('includes/header'); -%>
+<%- include('includes/nav'); -%>
+
+<div class="container">
+
+<div class="mx-auto" style="width: 50rem;">
+
+    <div class="container">
+
+        <a href="/qna/add" class="btn btn-secondary">질문 쓰기</a>
+        <br>
+        <table class="table">
+        <tr>
+          <th>제목</th>
+          <th>작성날짜</th>
+        </tr>
+        <% for(var i=0;i < qna.length; i++) { %>
+        <tr>
+          <td><a href="/qna/<%= qna[i].id %>" ><%= qna[i].text %></a></td>
+          <td><%= moment(qna[i].inserted).format('YYYY-MM-DD h:mm:ss a') %></td>
+        </tr>
+        <% } %>
+        </table>
+        
+        <br><br><br>
+        
+        
+        
+        
+        </div>
+
+
+<%- include('includes/footer'); -%>

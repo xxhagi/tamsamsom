@@ -1,0 +1,29 @@
+<%- include('includes/header'); -%>
+<%- include('includes/nav'); -%>
+
+<div class="container">
+<div class="mx-auto" style="width: 50rem;">
+
+
+<div class="container">
+    <form method="post" action="/qna/<%= qna.id %>/edit">
+    
+    
+    <div class="form-group" style=margin-bottom:50px;>
+    <label for="inputTitle">제목</label>
+    <input type="text" name="title"  autocomplete="off" class="form-control" id="inputTitle" aria-describedby="inputTitle" placeholder="제목을 입력해주세요." value="<%= qna.title %>">
+    </div>
+    
+    
+    <div class="form-group" style=margin-bottom:50px;>
+      <label for="inputDesc">문의 내용</label>
+      <textarea class="form-control" rows="10" cols="80" id="inputDesc" name="text" placeholder="문의하실 내용을 작성해주세요."><%= qna.text %></textarea>
+    </div>
+    
+    
+        <button type="submit" class="btn btn-secondary">수정하기</button>
+      <a href="/qna" class="btn btn-secondary">취소</a>
+    </form>
+    </div>
+    
+    <%- include('includes/footer'); -%>
