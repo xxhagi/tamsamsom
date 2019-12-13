@@ -52,6 +52,7 @@ module.exports = function(app, conn){
     res.redirect('/');
   });
 
+
   /* Sign Up: GET */
   router.get('/signup', (req, res) => {
     res.render('account/signup', {});

@@ -3,7 +3,7 @@ module.exports = function(app, conn, upload) {
     var router = express.Router();
     
 
-      router.get('/', (req, res) => {
+      router.get('/', (req, res, next) => {
         var sql = 'SELECT * FROM qna';
         conn.query(sql, [], function(err, qna, fields){
           if(err){
@@ -18,10 +18,10 @@ module.exports = function(app, conn, upload) {
         })
       })
     
-      router.get('/add', (req, res) => {
+      router.get('/add', (req, res, next) => {
         res.render('qna/add')
       })
-      router.post('/add', (req, res) => {
+      router.post('/add', (req, res, next) => {
         var title = req.body.title;
         var text = req.body.text;
         var sql = 'INSERT INTO qna (`title`, `text`, `inserted`, `updated`) VALUES(?, ?, now(), now())';
@@ -35,7 +35,7 @@ module.exports = function(app, conn, upload) {
           }
         })
       })
-      router.get('/:id', (req, res) => {
+      router.get('/:id', (req, res, next) => {
         var id = req.params.id;
         var sql = 'SELECT * FROM qna WHERE id=?';
         conn.query(sql, [id], function(err, qnas, fields){
@@ -52,7 +52,7 @@ module.exports = function(app, conn, upload) {
         })
       })
     
-      router.get('/:id/edit', (req, res) => {
+      router.get('/:id/edit', (req, res, next) => {
         var id = req.params.id;
         var sql = 'SELECT * FROM qna WHERE id=?';
         conn.query(sql, [id], function(err, qnas, fields){
@@ -69,7 +69,7 @@ module.exports = function(app, conn, upload) {
       })
     
       /* 수정 */
-      router.post('/:id/edit', (req, res) => {
+      router.post('/:id/edit', (req, res, next) => {
         var id = req.params.id;
         var title = req.body.title;
         var text = req.body.text;
@@ -87,7 +87,7 @@ module.exports = function(app, conn, upload) {
     
       
   /* Delete confirmation */
-  router.get('/:id/delete', (req, res) => {
+  router.get('/:id/delete', (req, res, next) => {
     var id = req.params.id;
     var sql = 'SELECT * FROM qna WHERE id=?';
     conn.query(sql, [id], function(err, news, fields){
@@ -101,7 +101,7 @@ module.exports = function(app, conn, upload) {
   });
 
   /* DELETE DB row */
-  router.post('/:id/delete', (req, res) => {
+  router.post('/:id/delete', (req, res, next) => {
     var id = req.params.id;
 
     var sql = 'DELETE FROM qna WHERE id = ?';
@@ -117,6 +117,5 @@ module.exports = function(app, conn, upload) {
     
       
 
-      return router
-    }
-    
+      return router;
+    };

@@ -83,6 +83,18 @@ app.use('/sugang', sugang);
 var welldone = require('./routes/welldone.js')(app, conn, upload);
 app.use('/welldone', welldone);
 
+/* result app */
+var result = require('./routes/result.js')(app, conn, upload);
+app.use('/result', result)
+app.post('/result', (req, res) => {
+  var result = req.body.test;
+ 
+  res.render('test/result', {result: result})
+});
+app.get('/sugang', (req, res) => {
+  res.render('result')
+});
+
 /* Port listening */
 app.listen(port, () => console.log(
     `Server is running... http://localhost:${port}`

@@ -1,6 +1,8 @@
 <%- include('includes/header'); -%>
 <%- include('includes/nav'); -%>
 
+
+
 <div class="container">
 
 <div class="mx-auto" style="width: 50rem;">
@@ -30,36 +32,42 @@
             <div class="card-body">
                         
 
+              <form action="/result" method="POST">
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" >
+        <input class="form-check-input" type="radio" name="test" id="exampleRadios1" value="A" >
         <label class="form-check-label" for="exampleRadios1">
           1.  차보다 커피가 더 좋아요. 
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <input class="form-check-input" type="radio" name="test" id="exampleRadios2" value="B">
         <label class="form-check-label" for="exampleRadios2">
             2.  차랑 커피랑 둘 다 좋아요.
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+        <input class="form-check-input" type="radio" name="test" id="exampleRadios3" value="C" >
         <label class="form-check-label" for="exampleRadios3">
             3.  차도 마시고 커피도 마셔요.
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" >
+        <input class="form-check-input" type="radio" name="test" id="exampleRadios1" value="D" >
         <label class="form-check-label" for="exampleRadios1">
           4.  I don't know.
         </label>
 
+        <br></br>
+
+        <button class="btn btn-md btn-dark" href="result" role="button" type="submit" style="height: 40px;">Submit</a>
+
+      </form>
 
 
 <br>
 <br>
 
-<a href="#" class="btn btn-primary">Submit</a>
+
 
       </div>
 

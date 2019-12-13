@@ -4,13 +4,15 @@
 <div class="container">
 
 <div class="mx-auto" style="width: 50rem;">
+    
+  <br>
 
-    <button type="button" class="btn btn-dark">요일 선택</button> * 주 3회
+    <button type="button" class="btn btn-secondary">요일 선택</button> * 주 3회
 
     <br>
     <br>
 
-    <button type="button" class="btn btn-light" $().button('toggle') data-toggle="button" aria-pressed="false">월</button>
+    <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">월</button>
     <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">화</button>
     <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">수</button>
     <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">목</button>
@@ -21,7 +23,7 @@
     <br>
     <br>
     
-    <button type="button" class="btn btn-dark">시간 선택</button>
+    <button type="button" class="btn btn-secondary">시간 선택</button>
 
     <br>
     <br>
@@ -49,7 +51,7 @@
 
   <br>
   <br>
-  <button type="button" class="btn btn-dark">레벨 선택</button> *자신의 수준에 맞는 강의를 듣기를 권장합니다.
+  <button type="button" class="btn btn-secondary">레벨 선택</button>    * 자신의 수준에 맞는 강의를 듣기를 권장합니다.
  <br>
  <br>
  <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">A</button>
@@ -58,13 +60,9 @@
  <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">D</button>
  <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">E</button>
 
-    <p class="text-xl-left"></p>
 
-    <a class="btn btn-primary" href="welldone" role="button">다음</a>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
-</html>
+    <p class="text-xl-left"></p>
+    <br>
+    <a class="btn btn-dark" href="welldone" role="button"> 수업 신청하기 </a>
+
+    <%- include('includes/footer'); -%>

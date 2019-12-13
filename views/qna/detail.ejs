@@ -4,24 +4,25 @@
 <div class="container">
 <div class="mx-auto" style="width: 50rem;">
 
-
+<br><br>
     <div class="container">
 
 
         <div class="row">
           <div class="col">
-            <h1><%= qna.title %></h1>
+            <h2><%= qna.title %></h2>
       
             <p>
-              입력: <%= moment(qna.inserted).format('YYYY-MM-DD h:mm:ss a') %>
-              <% if (qna.updated) { %>/ 수정: <%= moment(qna.updated).format('YYYY-MM-DD h:mm:ss a') %><% } %>
+              작성자: <%= qna.id %>
+              <br>
+              작성일자: <%= moment(qna.inserted).format('YYYY-MM-DD h:mm a') %>
             </p>
             <hr>
           </div>
         </div>
-      
+
         <div class="row">
-          <div class="col" style="white-space: pre-line;">
+          <div class="col" style="white-space:">
             <%= qna.text %>
           </div>
       
@@ -36,11 +37,11 @@
           <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
       
           <div class="btn-group" role="group" aria-label="First group">
-            <a href="/qna/<%= qna.id %>/edit" class="btn btn-outline-primary">수정</a>
+            <a href="/qna/<%= qna.id %>/edit" class="btn btn-outline-secondary">수정</a>
             <a href="/qna/<%= qna.id %>/delete" class="btn btn-outline-secondary">삭제</a>
           </div>
           <div class="input-group">
-            <a href="/qna/" class="btn btn-outline-info">목록</a>
+            <a href="/qna/" class="btn btn-secondary">목록</a>
           </div>
         </div>
       </div>

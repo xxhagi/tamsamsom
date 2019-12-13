@@ -5,41 +5,23 @@
 <div class="mx-auto" style="width: 50rem;">
 
 
-  <form action="/qna/add" method="POST">
-
-
-    <div class="container">
-          <h2>QnA</h2>
-          <hr align="center" style="border:solid 0.5px black; width: 99%">
-        </div>
-    
-            <div class="container">
-      <form method="post" action="/qna/add">
-    
-    
-            <div class="form-group" style=margin-bottom:50px;>
+<form action="/qna/add" method="POST">      
+        <div class="form-group">
           <label for="inputTitle">제목</label>
-          <input type="text" name="title" class="form-control" autocomplete="off" id="inputTitle" aria-describedby="inputTitle" placeholder="제목을 입력해주세요.">
-        </div>
+            <input type="text" name="title" class="form-control" autocomplete="off" id="inputTitle" aria-describedby="inputTitle" placeholder="제목을 입력해주세요.">
+             </div>
     
     
-            <div class="form-group" style=margin-bottom:50px;>
+            <div class="form-group">
               <label for="inputDesc">문의 내용</label>
-              <textarea class="form-control" rows="10" cols="80" id="inputDesc" name="text" placeholder="문의하실 내용을 작성해주세요."></textarea>
-            </div>
-    
-    
-                </div>
+               <textarea class="form-control" rows="10" cols="80" id="inputDesc" name="text" placeholder="문의하실 내용을 작성해주세요."></textarea>
+                 </div>
+                
     
                 <center><button type="submit" class="btn btn-secondary" style="margin-right:10px;">작성하기</button>
                 <a href="/qna" class="btn btn-secondary">취소하기</a></center>
               </form>
+ 
     
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-    
-        <%- include('includes/footer'); -%>
+
+ <%- include('includes/footer'); -%>
